@@ -55,7 +55,7 @@ class DallasComponent : public PollingComponent {
 class DallasTemperatureSensor : public sensor::Sensor {
  public:
   DallasTemperatureSensor(uint64_t address, uint8_t resolution, DallasComponent *parent);
-
+  DallasTemperatureSensor();
   void set_parent(DallasComponent *parent) { parent_ = parent; }
   /// Helper to get a pointer to the address as uint8_t.
   uint8_t *get_address8();

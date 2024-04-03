@@ -204,6 +204,9 @@ DallasTemperatureSensor::DallasTemperatureSensor(uint64_t address, uint8_t resol
   this->set_address(address);
   this->set_resolution(resolution);
 }
+DallasTemperatureSensor::DallasTemperatureSensor(){
+  
+}
 void DallasTemperatureSensor::set_address(uint64_t address) { this->address_ = address; }
 uint8_t DallasTemperatureSensor::get_resolution() const { return this->resolution_; }
 void DallasTemperatureSensor::set_resolution(uint8_t resolution) { this->resolution_ = resolution; }
