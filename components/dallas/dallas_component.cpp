@@ -74,7 +74,7 @@ void DallasComponent::setup() {
                  format_hex(address).c_str());
         dallastemperaturesensor->set_name(sensor_name);
         dallastemperaturesensor->set_unit_of_measurement(this->unit_of_measurement_.c_str());
-        //dallastemperaturesensor->set_icon(this->icon_);
+        dallastemperaturesensor->set_icon(this->icon_);
         dallastemperaturesensor->set_accuracy_decimals(this->accuracy_decimals_);
         dallastemperaturesensor->set_force_update(false);
         App.register_sensor(dallastemperaturesensor);
