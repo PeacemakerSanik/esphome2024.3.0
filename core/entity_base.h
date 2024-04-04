@@ -16,7 +16,7 @@ enum EntityCategory : uint8_t {
 class EntityBase {
  public:
   // Get/set the name of this Entity
-  const StringRef &get_name() const;
+  const std::string &get_name() const;
   void set_name(const char *name);
 
   // Get whether this Entity has its own name or it should use the device friendly_name.
@@ -53,7 +53,7 @@ class EntityBase {
   virtual uint32_t hash_base() { return 0L; }
   void calc_object_id_();
 
-  StringRef name_;
+  std::string name_;
   const char *object_id_c_str_{nullptr};
   const char *icon_c_str_{nullptr};
   uint32_t object_id_hash_;

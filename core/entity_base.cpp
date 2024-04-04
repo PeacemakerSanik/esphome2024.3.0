@@ -7,7 +7,7 @@ namespace esphome {
 static const char *const TAG = "entity_base";
 
 // Entity Name
-const StringRef &EntityBase::get_name() const { return this->name_; }
+const std::string &EntityBase::get_name() const { return this->name_; }
 void EntityBase::set_name(const char *name) {
   this->name_ = StringRef(name);
   if (this->name_.empty()) {

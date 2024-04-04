@@ -74,7 +74,7 @@ void DallasComponent::setup() {
                  format_hex(address).c_str());
         dallastemperaturesensor->set_name(sensor_name);
         dallastemperaturesensor->set_unit_of_measurement(this->unit_of_measurement_.c_str());
-        dallastemperaturesensor->set_icon(this->icon_);
+        dallastemperaturesensor->set_icon(this->icon_.c_str());
         dallastemperaturesensor->set_accuracy_decimals(this->accuracy_decimals_);
         dallastemperaturesensor->set_force_update(false);
         App.register_sensor(dallastemperaturesensor);
@@ -205,7 +205,7 @@ DallasTemperatureSensor::DallasTemperatureSensor(uint64_t address, uint8_t resol
   this->set_resolution(resolution);
 }
 DallasTemperatureSensor::DallasTemperatureSensor(){
-  
+
 }
 void DallasTemperatureSensor::set_address(uint64_t address) { this->address_ = address; }
 uint8_t DallasTemperatureSensor::get_resolution() const { return this->resolution_; }
